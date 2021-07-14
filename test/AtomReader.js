@@ -2,21 +2,6 @@ const { expect, assert } = require("chai");
 const {parseHash, getIons} = require("../metadata");
 const {hashes}    = require("../hashes");
 
-function randomHash(){
-  const library = '0123456789abcdef';
-  let h = '';
-  for(let i = 0; i < 64; i++){
-    let j = Math.floor(Math.random()*(library.length));
-    h += library[j];
-  }
-  return h;
-}
-
-function generate_tokenId(min,max){
-  return min + Math.round(Math.random() * (max - min));
-}
-
-
 let powNFTplaceholder;
 
 describe("AtomReader", function() {
@@ -30,8 +15,6 @@ describe("AtomReader", function() {
       }
   });
 
-  //TODO test all funcs
-
   it("Returns correct getAtomicNumber for all known hashes", async function(){
     const AtomReader = await ethers.getContractFactory("AtomReader");
     const atomReader = await AtomReader.deploy(powNFTplaceholder.address);
@@ -43,7 +26,6 @@ describe("AtomReader", function() {
 
     for(let i = 0; i < attempts; i++){
       let id = i+1;
-      // let hash = "0x"+randomHash();
       let hash = await powNFTplaceholder.hashOf(id);
 
       let metadata = parseHash(id,hash);
@@ -83,17 +65,10 @@ describe("AtomReader", function() {
       let metadata = parseHash(id, hash);
 
       let expected = metadata.ion_charge;
-
-      // let atomicNumber = await atomReader.getAtomicNumber(id);
-
       let reported = await atomReader.getIonCharge(id);
-
-      // console.log('>>');
-      // console.log(expected,reported);
 
       if(expected.toString() === reported.toString()){
         matches++;
-        // console.log(matches);
       }else{
         console.log('fail:');
         console.log("    ",expected.toString(),reported.toString());

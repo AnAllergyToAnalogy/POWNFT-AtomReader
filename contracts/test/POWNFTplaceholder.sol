@@ -17,8 +17,4 @@ contract POWNFTplaceholder{
     function pushHash(bytes32 hash) public{
         hashes.push(hash);
     }
-
-    constructor(){
-
-    }
 }
