@@ -15,7 +15,6 @@ The AtomReader is deployed on the Mainnet at 0xAABBCC
 The Atom Reader has 6 public functions, you can find them described in the `IAtomReader` interface.
 
 ```
-//SPDX-License-Identifier: Licence to thrill
 pragma solidity ^0.8.0;
 
 /// @title POWNFT Atom Reader
