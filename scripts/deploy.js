@@ -14,8 +14,6 @@ async function main() {
         ropsten: "0xcf2F4F98df13DAA8bA5780003fcb1F4e31931F45",
     }
 
-
-
     let pownft = POWNFT[network]
 
     const [deployer] = await ethers.getSigners();

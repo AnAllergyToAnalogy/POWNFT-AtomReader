@@ -1,5 +1,0 @@
-ROPSTEN_ALCHEMY_KEY="your-ropsten-alchemy-key"
-MAINNET_ALCHEMY_KEY="your-mainnet-alchemy-key"
-ROPSTEN_PRIVATE_KEY="your-ropsten-eth-private-key"
-MAINNET_PRIVATE_KEY="your-mainnet-eth-private-key"
-ETHERSCAN_API_KEY="your-etherscan-api-key"
