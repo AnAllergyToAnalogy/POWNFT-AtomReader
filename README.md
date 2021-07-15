@@ -7,7 +7,7 @@ The contract was developed for an upcoming feature being added to the POW NFT ec
 
 ## Contracts
 
-The AtomReader is deployed on the Mainnet at 0xAABBCC
+The AtomReader is deployed on the [Mainnet at 0x41d44e1cd2b335dc7662380d58eb03c5539b907f](https://etherscan.io/address/0x41d44e1cd2b335dc7662380d58eb03c5539b907f#code)
 
 
 ## The code
