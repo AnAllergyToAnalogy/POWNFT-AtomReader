@@ -1,11 +1,6 @@
 async function main() {
 
-    let network;
-    if(process.title.includes("ropsten")){
-        network = "ropsten";
-    }else{
-        network = "mainnet";
-    }
+    let network = process.env.HARDHAT_NETWORK;
 
     console.log("network:",network);
 
